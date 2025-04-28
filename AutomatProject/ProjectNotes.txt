@@ -1,0 +1,46 @@
+﻿03.04.2013: Reincarnation of the Forex Project!
+
+03.04.2013:
+	1947: I see the VT API has been discontinued since May 2010, accroding to the CMS website: http://forum.vtsystems.com/index.php?showtopic=15416. I am following the 
+		thread and will see how the API from forex.com works: http://www.forex.com/forex-api.html.
+	1949: FYI!	Account information for VT:				ezraeurope@yahoo.com	|	xw7b6sn5, including forums.
+				Account information for forex.com:		ezraeurope				|	Xw7b6sn5, No dice, want $5,000 deposit.
+	2016: Found a ForexConnectAPI which looks like the old openforex project: http://fxcodebase.com/wiki/index.php/Main_Page.
+				Account information for Forex connect:	D171941699001			|	3827	(http://www.fxcm.com)
+	2033: Start here: http://fxcodebase.com/wiki/index.php/How_to_Login_in_ForexConnect_%28.NET%29
+	2050: Did implement, but not all, get the message "Could not load file or assembly 'fxcore2.dll' or one of its dependencies. The specified module could not be found."
+	2054: Fixed by following advice on forums about putting all files from installer 'bin' folder to executing directory. My implementation gives stackoverflow :-( WHOOPS!
+	2059: Also check here: http://fxcodebase.com/wiki/index.php/How_to_Start_Using_ForexConnect_.NET_API_%28Win32/Win64%29.
+	2212: I have gotten the Automat to connect and disconnect from the forex server! :-) Tired now, will resume tomorrow....night.
+04.04.2013:
+	1017: Here to continue challenging myself on this project.
+	1107: Have gotten the logging function clean and working well. Can also login and logout cleanly from the server.
+	1108: Now to walk through the next steps on the .chm file:
+		1. Because this was/is the automat, let's see if I can get the historic prices and put them in a database.
+		2. Continue...
+	1235: Have gotten 95% of historic prices implmented but need to reflect on the design. New stuff and my brain is tired from the completed thesis stuff.
+	1237: Taking a break.
+	1259: Back to organize the events.
+	1317: Functioning and getting historical data from the server! :-)
+	1416: Having a problem now with a null 'factory' object. Will take a walk and come back to it.
+	1718: Back now.
+	1735: Stuck on this factory null thing. It worked one time now it fucked. :-(
+	1917: I have got it working again and it is positing data in the database. :-)
+	1918: Now what to do about the data going forward.........................
+11.04.2013:
+	1025: Spent late yesterday into the night getting the data formatted for the NN. Have the candlestick object.
+	1026: Will first try to duplicate the data from the TimeSeries project to get a feel for the solution with a single candlestick datapoint, BidClose.
+	1542: The data is packaged as a Candlestick object and as double[][]. Since the data for the TimeSeries is double[], I will have to think how to sort this.
+	1545: Seems that the compute algorithm takes double[], by examination of the source.
+	1639: Leaving the project for now.
+13.04.2013:
+	957: Want to gather 1000 datapoints and store in database in case over the next week have some interest in working on the dataprocessing algorithm.
+	1312: Have gathered forex data, granularity per minute, from the week of 08.04.2013:0000 to 12.04.2013:2059--a total of 6967 pieces of data.
+	1319: Now is possible to simply focus on parsing and sorting the data.
+22.04.2013:
+	1941: Taking a break from Uhoo at 1400, I have completed a trial test of not only the data display for forex data that I gathered before holiday, but also the prediction 
+		algorithm! :-) Big smiles! I took a screen shot and it is clearly seen the trend of the data.
+	1942: Next steps are to improve the prediction and add some multi-threading for the Windows components to receiving updated data while processing.
+	1943: Finally....an ambition from 2009 is now being realized...
+23.04.2013:
+	2009: The solution is to add casual entropy to the SearchSolution() method and your buy-low, sell-high system is ready.

@@ -1,0 +1,1 @@
+copy "C:\Program Files\Candleworks\ForexConnectAPI\bin\*.dll" "$(TargetDir)"
